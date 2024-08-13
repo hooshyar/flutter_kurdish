@@ -68,34 +68,8 @@ const kuDateSymbols2 = {
   'NAME': 'ku',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
-  'NARROWMONTHS': [
-    'ک.د',
-    'ش',
-    'ز',
-    'ن',
-    'م',
-    'ح',
-    'ت',
-    'ئ',
-    'ل',
-    'ت.ی',
-    'ت.د',
-    'ک.ی'
-  ],
-  'STANDALONENARROWMONTHS': [
-    'ک.د',
-    'ش',
-    'ز',
-    'ن',
-    'م',
-    'ح',
-    'ت',
-    'ئ',
-    'ل',
-    'ت.ی',
-    'ت.د',
-    'ک.ی'
-  ],
+  'NARROWMONTHS': ['ک.د', 'ش', 'ز', 'ن', 'م', 'ح', 'ت', 'ئ', 'ل', 'ت.ی', 'ت.د', 'ک.ی'],
+  'STANDALONENARROWMONTHS': ['ک.د', 'ش', 'ز', 'ن', 'م', 'ح', 'ت', 'ئ', 'ل', 'ت.ی', 'ت.د', 'ک.ی'],
   'MONTHS': [
     'کانونی دووەم',
     'شوبات',
@@ -152,42 +126,10 @@ const kuDateSymbols2 = {
     'تشرینی دووەم',
     'کانونی یەکەم',
   ],
-  'WEEKDAYS': [
-    'یەکشەممە',
-    'دووشەممە',
-    'سێشەممە',
-    'چوارشەممە',
-    'پێنجشەممە',
-    'هەینی',
-    'شەممە'
-  ],
-  'STANDALONEWEEKDAYS': [
-    'یەکشەممە',
-    'دووشەممە',
-    'سێشەممە',
-    'چوارشەممە',
-    'پێنجشەممە',
-    'هەینی',
-    'شەممە'
-  ],
-  'SHORTWEEKDAYS': [
-    'یەکشەم',
-    'دووشەم',
-    'سێشەم',
-    'چوارشەم',
-    'پێنجشەم',
-    'هەینی',
-    'شەممە'
-  ],
-  'STANDALONESHORTWEEKDAYS': [
-    'یەکشەم',
-    'دووشەم',
-    'سێشەم',
-    'چوارشەم',
-    'پێنجشەم',
-    'هەینی',
-    'شەممە'
-  ],
+  'WEEKDAYS': ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'],
+  'STANDALONEWEEKDAYS': ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'],
+  'SHORTWEEKDAYS': ['یەکشەم', 'دووشەم', 'سێشەم', 'چوارشەم', 'پێنجشەم', 'هەینی', 'شەممە'],
+  'STANDALONESHORTWEEKDAYS': ['یەکشەم', 'دووشەم', 'سێشەم', 'چوارشەم', 'پێنجشەم', 'هەینی', 'شەممە'],
   'NARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'STANDALONENARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'SHORTQUARTERS': ['چ١', 'چ٢', 'چ٣', 'چ٤'],
@@ -219,8 +161,7 @@ const kuDateSymbols2 = {
 };
 
 // #docregion Delegate
-class KurdishCupertinoLocalizationsDelegate
-    extends LocalizationsDelegate<CupertinoLocalizations> {
+class KurdishCupertinoLocalizationsDelegate extends LocalizationsDelegate<CupertinoLocalizations> {
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
@@ -312,39 +253,58 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   @override
   String get selectAllButtonLabel => r'دیاریکردنی هەموو';
 
-  static const LocalizationsDelegate<CupertinoLocalizations> delegate =
-      KurdishCupertinoLocalizationsDelegate();
+  static const LocalizationsDelegate<CupertinoLocalizations> delegate = KurdishCupertinoLocalizationsDelegate();
 
   @override
-  String get datePickerDateOrderString => throw UnimplementedError();
+  String get datePickerDateOrderString => r' d MMMM y';
 
   @override
-  String get datePickerDateTimeOrderString => throw UnimplementedError();
+  String get datePickerDateTimeOrderString => r'EEE d MMMM y HH:mm';
 
   @override
-  String? get datePickerHourSemanticsLabelOther => throw UnimplementedError();
+  String? get datePickerHourSemanticsLabelOther => r'کاتژمێر';
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => throw UnimplementedError();
+  String? get datePickerMinuteSemanticsLabelOther => r'خولەک';
 
   @override
-  String get searchTextFieldPlaceholderLabel => throw UnimplementedError();
+  String get searchTextFieldPlaceholderLabel => r'گەڕان';
 
   @override
-  String get tabSemanticsLabelRaw => throw UnimplementedError();
+  String get tabSemanticsLabelRaw => throw r'پەڕە';
 
   @override
-  String? get timerPickerHourLabelOther => throw UnimplementedError();
+  String? get timerPickerHourLabelOther => r' کاتژمێر';
 
   @override
-  String? get timerPickerMinuteLabelOther => throw UnimplementedError();
+  String? get timerPickerMinuteLabelOther => r' خولەک';
 
   @override
-  String? get timerPickerSecondLabelOther => throw UnimplementedError();
+  String? get timerPickerSecondLabelOther => r' چرکە';
 
   @override
-  String get todayLabel => throw UnimplementedError();
+  String get todayLabel => r' ئەمڕۆ';
 
   @override
-  String get noSpellCheckReplacementsLabel => throw UnimplementedError();
+  String get noSpellCheckReplacementsLabel => r' بەجێی هیچ ڕێگەیەک نییە';
+
+  @override
+  // TODO: implement lookUpButtonLabel
+  String get lookUpButtonLabel => r' بەردەوام بە';
+
+  @override
+  // TODO: implement menuDismissLabel
+  String get menuDismissLabel => r' لادان';
+
+  @override
+  // TODO: implement searchWebButtonLabel
+  String get searchWebButtonLabel => r' گەڕان لە وێب';
+
+  @override
+  // TODO: implement shareButtonLabel
+  String get shareButtonLabel => r' بڵاوکردنەوە';
+
+  @override
+  // TODO: implement clearButtonLabel
+  String get clearButtonLabel => r' رەش کردنەوە';
 }
