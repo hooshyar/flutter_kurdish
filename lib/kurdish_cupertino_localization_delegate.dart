@@ -68,8 +68,34 @@ const kuDateSymbols2 = {
   'NAME': 'ku',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
-  'NARROWMONTHS': ['ک.د', 'ش', 'ز', 'ن', 'م', 'ح', 'ت', 'ئ', 'ل', 'ت.ی', 'ت.د', 'ک.ی'],
-  'STANDALONENARROWMONTHS': ['ک.د', 'ش', 'ز', 'ن', 'م', 'ح', 'ت', 'ئ', 'ل', 'ت.ی', 'ت.د', 'ک.ی'],
+  'NARROWMONTHS': [
+    'ک.د',
+    'ش',
+    'ز',
+    'ن',
+    'م',
+    'ح',
+    'ت',
+    'ئ',
+    'ل',
+    'ت.ی',
+    'ت.د',
+    'ک.ی'
+  ],
+  'STANDALONENARROWMONTHS': [
+    'ک.د',
+    'ش',
+    'ز',
+    'ن',
+    'م',
+    'ح',
+    'ت',
+    'ئ',
+    'ل',
+    'ت.ی',
+    'ت.د',
+    'ک.ی'
+  ],
   'MONTHS': [
     'کانونی دووەم',
     'شوبات',
@@ -126,10 +152,42 @@ const kuDateSymbols2 = {
     'تشرینی دووەم',
     'کانونی یەکەم',
   ],
-  'WEEKDAYS': ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'],
-  'STANDALONEWEEKDAYS': ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'],
-  'SHORTWEEKDAYS': ['یەکشەم', 'دووشەم', 'سێشەم', 'چوارشەم', 'پێنجشەم', 'هەینی', 'شەممە'],
-  'STANDALONESHORTWEEKDAYS': ['یەکشەم', 'دووشەم', 'سێشەم', 'چوارشەم', 'پێنجشەم', 'هەینی', 'شەممە'],
+  'WEEKDAYS': [
+    'یەکشەممە',
+    'دووشەممە',
+    'سێشەممە',
+    'چوارشەممە',
+    'پێنجشەممە',
+    'هەینی',
+    'شەممە'
+  ],
+  'STANDALONEWEEKDAYS': [
+    'یەکشەممە',
+    'دووشەممە',
+    'سێشەممە',
+    'چوارشەممە',
+    'پێنجشەممە',
+    'هەینی',
+    'شەممە'
+  ],
+  'SHORTWEEKDAYS': [
+    'یەکشەم',
+    'دووشەم',
+    'سێشەم',
+    'چوارشەم',
+    'پێنجشەم',
+    'هەینی',
+    'شەممە'
+  ],
+  'STANDALONESHORTWEEKDAYS': [
+    'یەکشەم',
+    'دووشەم',
+    'سێشەم',
+    'چوارشەم',
+    'پێنجشەم',
+    'هەینی',
+    'شەممە'
+  ],
   'NARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'STANDALONENARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'SHORTQUARTERS': ['چ١', 'چ٢', 'چ٣', 'چ٤'],
@@ -161,7 +219,8 @@ const kuDateSymbols2 = {
 };
 
 // #docregion Delegate
-class KurdishCupertinoLocalizationsDelegate extends LocalizationsDelegate<CupertinoLocalizations> {
+class KurdishCupertinoLocalizationsDelegate
+    extends LocalizationsDelegate<CupertinoLocalizations> {
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
@@ -199,6 +258,7 @@ class KurdishCupertinoLocalizationsDelegate extends LocalizationsDelegate<Cupert
         singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
         singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
         singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
+        weekdayFormat: intl.DateFormat('EEE', localeName),
       ),
     );
   }
@@ -214,16 +274,28 @@ class KurdishCupertinoLocalizationsDelegate extends LocalizationsDelegate<Cupert
 /// and formatting.
 class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   const KurdishCupertinoLocalizations({
-    super.localeName = 'ku',
-    required super.fullYearFormat,
-    required super.mediumDateFormat,
-    required super.decimalFormat,
-    required super.dayFormat,
-    required super.doubleDigitMinuteFormat,
-    required super.singleDigitHourFormat,
-    required super.singleDigitMinuteFormat,
-    required super.singleDigitSecondFormat,
-  });
+    String localeName = 'ku',
+    required intl.DateFormat fullYearFormat,
+    required intl.DateFormat mediumDateFormat,
+    required intl.NumberFormat decimalFormat,
+    required intl.DateFormat dayFormat,
+    required intl.DateFormat doubleDigitMinuteFormat,
+    required intl.DateFormat singleDigitHourFormat,
+    required intl.DateFormat singleDigitMinuteFormat,
+    required intl.DateFormat singleDigitSecondFormat,
+    required intl.DateFormat weekdayFormat,
+  }) : super(
+          localeName: localeName,
+          fullYearFormat: fullYearFormat,
+          mediumDateFormat: mediumDateFormat,
+          decimalFormat: decimalFormat,
+          dayFormat: dayFormat,
+          doubleDigitMinuteFormat: doubleDigitMinuteFormat,
+          singleDigitHourFormat: singleDigitHourFormat,
+          singleDigitMinuteFormat: singleDigitMinuteFormat,
+          singleDigitSecondFormat: singleDigitSecondFormat,
+          weekdayFormat: weekdayFormat,
+        );
 
 // #docregion Getters
 
@@ -253,7 +325,8 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   @override
   String get selectAllButtonLabel => r'دیاریکردنی هەموو';
 
-  static const LocalizationsDelegate<CupertinoLocalizations> delegate = KurdishCupertinoLocalizationsDelegate();
+  static const LocalizationsDelegate<CupertinoLocalizations> delegate =
+      KurdishCupertinoLocalizationsDelegate();
 
   @override
   String get datePickerDateOrderString => r' d MMMM y';
