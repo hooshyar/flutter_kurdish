@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -241,7 +240,7 @@ class KurdishCupertinoLocalizationsDelegate
     return SynchronousFuture<CupertinoLocalizations>(
       KurdishCupertinoLocalizations(
         localeName: localeName,
-        // The `intl` library's NumberFormat class is generated from CLDR data
+        // The intl library's NumberFormat class is generated from CLDR data
         // (see https://github.com/dart-lang/intl/blob/master/lib/number_symbols_data.dart).
         // Unfortunately, there is no way to use a locale that isn't defined in
         // this map and the only way to work around this is to use a listed
@@ -249,7 +248,7 @@ class KurdishCupertinoLocalizationsDelegate
         // for 'en_US' instead.
         decimalFormat: intl.NumberFormat('#,##0.###', 'ar'),
         // DateFormat here will use the symbols and patterns provided in the
-        // `date_symbol_data_custom.initializeDateFormattingCustom` call above.
+        // date_symbol_data_custom.initializeDateFormattingCustom call above.
         // However, an alternative is to simply use a supported locale's
         // DateFormat symbols, similar to NumberFormat above.
         fullYearFormat: intl.DateFormat('y', localeName),
@@ -259,7 +258,7 @@ class KurdishCupertinoLocalizationsDelegate
         singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
         singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
         singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
-        weekdayFormat: intl.DateFormat('ddd', localeName),
+        weekdayFormat: intl.DateFormat('EEEE', localeName), // Add this line
       ),
     );
   }
@@ -284,7 +283,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
     required super.singleDigitHourFormat,
     required super.singleDigitMinuteFormat,
     required super.singleDigitSecondFormat,
-    required super.weekdayFormat,
+    required super.weekdayFormat, // Add this
   });
 
 // #docregion Getters
