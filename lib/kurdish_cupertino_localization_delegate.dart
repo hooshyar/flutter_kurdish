@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -7,7 +8,7 @@ import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
 /// A custom set of date patterns for the `nn` locale.
-///
+//
 /// These are not accurate and are just a clone of the date patterns for the
 /// `no` locale to demonstrate how one would write and use custom date patterns.
 // #docregion Date
@@ -258,7 +259,7 @@ class KurdishCupertinoLocalizationsDelegate
         singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
         singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
         singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
-        weekdayFormat: intl.DateFormat('EEE', localeName),
+        weekdayFormat: intl.DateFormat('ddd', localeName),
       ),
     );
   }
@@ -274,28 +275,17 @@ class KurdishCupertinoLocalizationsDelegate
 /// and formatting.
 class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   const KurdishCupertinoLocalizations({
-    String localeName = 'ku',
-    required intl.DateFormat fullYearFormat,
-    required intl.DateFormat mediumDateFormat,
-    required intl.NumberFormat decimalFormat,
-    required intl.DateFormat dayFormat,
-    required intl.DateFormat doubleDigitMinuteFormat,
-    required intl.DateFormat singleDigitHourFormat,
-    required intl.DateFormat singleDigitMinuteFormat,
-    required intl.DateFormat singleDigitSecondFormat,
-    required intl.DateFormat weekdayFormat,
-  }) : super(
-          localeName: localeName,
-          fullYearFormat: fullYearFormat,
-          mediumDateFormat: mediumDateFormat,
-          decimalFormat: decimalFormat,
-          dayFormat: dayFormat,
-          doubleDigitMinuteFormat: doubleDigitMinuteFormat,
-          singleDigitHourFormat: singleDigitHourFormat,
-          singleDigitMinuteFormat: singleDigitMinuteFormat,
-          singleDigitSecondFormat: singleDigitSecondFormat,
-          weekdayFormat: weekdayFormat,
-        );
+    super.localeName = 'ku',
+    required super.fullYearFormat,
+    required super.mediumDateFormat,
+    required super.decimalFormat,
+    required super.dayFormat,
+    required super.doubleDigitMinuteFormat,
+    required super.singleDigitHourFormat,
+    required super.singleDigitMinuteFormat,
+    required super.singleDigitSecondFormat,
+    required super.weekdayFormat,
+  });
 
 // #docregion Getters
 
@@ -329,55 +319,51 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
       KurdishCupertinoLocalizationsDelegate();
 
   @override
-  String get datePickerDateOrderString => r' d MMMM y';
+  String get datePickerDateOrderString => "هەڵبژاردنی بەروار";
 
   @override
-  String get datePickerDateTimeOrderString => r'EEE d MMMM y HH:mm';
+  String get datePickerDateTimeOrderString => "کات هەڵبژێرە";
 
   @override
-  String? get datePickerHourSemanticsLabelOther => r'کاتژمێر';
+  String? get datePickerHourSemanticsLabelOther => "کاتژمێری هەڵبژاردنی بەروار";
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => r'خولەک';
+  String? get datePickerMinuteSemanticsLabelOther => "خولەکی هەڵبژاردنی بەروار";
 
   @override
-  String get searchTextFieldPlaceholderLabel => r'گەڕان';
+  String get searchTextFieldPlaceholderLabel => "گەڕان";
 
   @override
-  String get tabSemanticsLabelRaw => throw r'پەڕە';
+  String get tabSemanticsLabelRaw => "ماناسازی تاب";
 
   @override
-  String? get timerPickerHourLabelOther => r' کاتژمێر';
+  String? get timerPickerHourLabelOther => "هەڵبژێرەری کاتژمێر";
 
   @override
-  String? get timerPickerMinuteLabelOther => r' خولەک';
+  String? get timerPickerMinuteLabelOther => "هەڵبژێرەری خولەک";
 
   @override
-  String? get timerPickerSecondLabelOther => r' چرکە';
+  String? get timerPickerSecondLabelOther => "هەڵبژێرەری چرکە";
 
   @override
-  String get todayLabel => r' ئەمڕۆ';
+  String get todayLabel => "ئەمڕۆ";
 
   @override
-  String get noSpellCheckReplacementsLabel => r' بەجێی هیچ ڕێگەیەک نییە';
+  String get noSpellCheckReplacementsLabel =>
+      "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
 
   @override
-  // TODO: implement lookUpButtonLabel
-  String get lookUpButtonLabel => r' بەردەوام بە';
+  String get lookUpButtonLabel => 'بە دوادا گەڕان';
 
   @override
-  // TODO: implement menuDismissLabel
-  String get menuDismissLabel => r' لادان';
+  String get menuDismissLabel => 'بەلاوە نان';
 
   @override
-  // TODO: implement searchWebButtonLabel
-  String get searchWebButtonLabel => r' گەڕان لە وێب';
+  String get searchWebButtonLabel => 'گەڕان لە وێب';
 
   @override
-  // TODO: implement shareButtonLabel
-  String get shareButtonLabel => r' بڵاوکردنەوە';
+  String get shareButtonLabel => 'هاوبەشکردن';
 
   @override
-  // TODO: implement clearButtonLabel
-  String get clearButtonLabel => r' رەش کردنەوە';
+  String get clearButtonLabel => "";
 }
