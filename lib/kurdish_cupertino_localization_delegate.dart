@@ -228,8 +228,8 @@ class KurdishCupertinoLocalizationsDelegate
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
-    final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
-    // The locale (in this case `nn`) needs to be initialized into the custom
+    const String localeName = 'ku';
+    // The locale (in this case `ku`) needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
