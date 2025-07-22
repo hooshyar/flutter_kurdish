@@ -30,26 +30,20 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   TextDirection get textDirection => TextDirection.rtl;
 
   @override
-  // TODO: implement reorderItemDown
-  String get reorderItemDown => throw UnimplementedError();
+  String get reorderItemDown => 'بڕۆ خوارەوە';
 
   @override
-  // TODO: implement reorderItemLeft
-  String get reorderItemLeft => throw UnimplementedError();
+  String get reorderItemLeft => 'بڕۆ لای چەپ';
 
   @override
-  // TODO: implement reorderItemRight
-  String get reorderItemRight => throw UnimplementedError();
+  String get reorderItemRight => 'بڕۆ لای راست';
 
   @override
-  // TODO: implement reorderItemToEnd
-  String get reorderItemToEnd => throw UnimplementedError();
+  String get reorderItemToEnd => 'بڕۆ کۆتایی';
 
   @override
-  // TODO: implement reorderItemToStart
-  String get reorderItemToStart => throw UnimplementedError();
+  String get reorderItemToStart => 'بڕۆ سەرەتا';
 
   @override
-  // TODO: implement reorderItemUp
-  String get reorderItemUp => throw UnimplementedError();
+  String get reorderItemUp => 'بڕۆ سەرەوە';
 }
