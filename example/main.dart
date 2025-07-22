@@ -77,7 +77,7 @@ class DemoHomePage extends StatelessWidget {
                 value: 'ku',
                 child: Row(
                   children: [
-                    Text('🇰🇷'),
+                    Text('☀️'),
                     SizedBox(width: 8),
                     Text('کوردی'),
                   ],

@@ -1,4 +1,4 @@
-# Flutter Kurdish 🇰🇷
+# Flutter Kurdish ☀️
 
 [![pub package](https://img.shields.io/pub/v/flutter_kurdish.svg)](https://pub.dev/packages/flutter_kurdish)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -291,4 +291,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 **Made with ❤️ for the Kurdish community**
 
-*بۆ کۆمەڵگای کوردی دروستکراوە* 🇰🇷
+*بۆ کۆمەڵگای کوردی دروستکراوە* ☀️
