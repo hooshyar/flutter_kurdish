@@ -282,7 +282,7 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get searchFieldLabel => 'گەڕان';
 
   @override
-  String get selectAllButtonLabel => 'هەموو هەڵبژێرە';
+  String get selectAllButtonLabel => 'هەمووی دیاریبکە';
 
   @override
   String get selectYearSemanticsLabel => 'ساڵ هەڵبژێرە';
@@ -610,9 +610,9 @@ const kuDateSymbols = {
     'شوبات',
     'ئازار',
     'نیسان',
-    'مایس',
+    'ئایار',
     'حوزەیران',
-    'تەمموز',
+    'تەمووز',
     'ئاب',
     'ئەیلوول',
     'تشرینی یەکەم',
@@ -624,9 +624,9 @@ const kuDateSymbols = {
     'شوبات',
     'ئازار',
     'نیسان',
-    'مایس',
+    'ئایار',
     'حوزەیران',
-    'تەمموز',
+    'تەمووز',
     'ئاب',
     'ئەیلوول',
     'تشرینی یەکەم',
@@ -638,9 +638,9 @@ const kuDateSymbols = {
     'شوبات',
     'ئازار',
     'نیسان',
-    'مایس',
+    'ئایار',
     'حوزەیران',
-    'تەمموز',
+    'تەمووز',
     'ئاب',
     'ئەیلوول',
     'تشرینی یەکەم',
@@ -652,9 +652,9 @@ const kuDateSymbols = {
     'شوبات',
     'ئازار',
     'نیسان',
-    'مایس',
+    'ئایار',
     'حوزەیران',
-    'تەمموز',
+    'تەمووز',
     'ئاب',
     'ئەیلوول',
     'تشرینی یەکەم',
@@ -722,8 +722,8 @@ const kuDateSymbols = {
     '{1} {0}',
   ],
   'ZERODIGIT': '٠',
-  'FIRSTDAYOFWEEK': 5,
-  'WEEKENDRANGE': [4, 5],
+  'FIRSTDAYOFWEEK': 0,
+  'WEEKENDRANGE': [5, 6],
   'FIRSTWEEKCUTOFFDAY': 3
 };
 const kuLocaleDatePatterns = {

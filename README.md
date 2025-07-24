@@ -23,9 +23,11 @@ This package is a **fork and significant enhancement** of the original [`flutter
 - ✅ **Fixed critical crashes** in modal dialogs and bottom sheets
 - ✅ **Complete implementation** of all missing translations (78+ methods)
 - ✅ **Enhanced accessibility** with proper Kurdish semantic labels
-- ✅ **Improved date/time formatting** for Kurdish locale
+- ✅ **Improved date/time formatting** for Kurdish locale with correct weekend (Friday-Saturday)
+- ✅ **Standardized terminology** across Material, Cupertino, and Widget delegates
 - ✅ **Comprehensive keyboard support** for all key types
-- ✅ **Better documentation** and examples
+- ✅ **Better documentation** and enhanced example app with Cupertino widgets
+- ✅ **Cultural accuracy** with proper Kurdish month names and RTL support
 
 ## 🚀 Installation
 

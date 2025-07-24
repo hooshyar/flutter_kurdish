@@ -35,10 +35,7 @@ build/
 CLAUDE.md
 
 # Flutter/Dart metadata and temporary files
-.metadata
-**/.metadata
-logger.txt
-**/logger.txt
+# Note: .metadata and logger.txt are tracked as they're already in the repo
 
 # Generated files
 .flutter-plugins

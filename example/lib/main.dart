@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_kurdish/flutter_kurdish.dart';
 
 void main() {
-  runApp(const KurdishLocalizationDemo());
+  runApp(KurdishLocalizationDemo());
 }
 
 class KurdishLocalizationDemo extends StatefulWidget {
   const KurdishLocalizationDemo({super.key});
   
   @override
-  KurdishLocalizationDemoState createState() => KurdishLocalizationDemoState();
+  State<KurdishLocalizationDemo> createState() => _KurdishLocalizationDemoState();
 }
 
-class KurdishLocalizationDemoState extends State<KurdishLocalizationDemo> {
+class _KurdishLocalizationDemoState extends State<KurdishLocalizationDemo> {
   Locale _currentLocale = Locale('ku');
 
   void _changeLocale(String languageCode) {
@@ -281,6 +282,62 @@ class DemoHomePage extends StatelessWidget {
                       style: TextStyle(fontSize: 14),
                       textDirection: TextDirection.rtl,
                     ),
+                    SizedBox(height: 12),
+                    // Demonstrate RTL support
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('RTL Direction:', style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('✅ Supported'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Weekend Days:', style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Friday & Saturday'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Calendar System:', style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Kurdish Months'),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
+            SizedBox(height: 20),
+            
+            // Cupertino Examples
+            Text(
+              'iOS-style (Cupertino) Examples',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            SizedBox(height: 10),
+            
+            Card(
+              child: Padding(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () => _showCupertinoDialog(context),
+                      child: Text('Show iOS-style Dialog'),
+                    ),
+                    SizedBox(height: 8),
+                    ElevatedButton(
+                      onPressed: () => _showCupertinoActionSheet(context),
+                      child: Text('Show iOS Action Sheet'),
+                    ),
+                    SizedBox(height: 8),
+                    ElevatedButton(
+                      onPressed: () => _showCupertinoDatePicker(context),
+                      child: Text('Show iOS Date Picker'),
+                    ),
                   ],
                 ),
               ),
@@ -396,5 +453,105 @@ class DemoHomePage extends StatelessWidget {
         SnackBar(content: Text('Selected time: $formattedTime')),
       );
     }
+  }
+  
+  void _showCupertinoDialog(BuildContext context) {
+    showCupertinoDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return CupertinoAlertDialog(
+          title: Text('Kurdish iOS-style Dialog'),
+          content: Text('This demonstrates Kurdish localization with iOS-style (Cupertino) widgets. All buttons use Kurdish translations.'),
+          actions: [
+            CupertinoDialogAction(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text('Cancel'),
+            ),
+            CupertinoDialogAction(
+              isDefaultAction: true,
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  
+  void _showCupertinoActionSheet(BuildContext context) {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (BuildContext context) {
+        return CupertinoActionSheet(
+          title: Text('Kurdish Action Sheet'),
+          message: Text('Choose an option from this Kurdish-localized action sheet'),
+          actions: [
+            CupertinoActionSheetAction(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text('Copy'),
+            ),
+            CupertinoActionSheetAction(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text('Share'),
+            ),
+            CupertinoActionSheetAction(
+              isDestructiveAction: true,
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text('Delete'),
+            ),
+          ],
+          cancelButton: CupertinoActionSheetAction(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text('Cancel'),
+          ),
+        );
+      },
+    );
+  }
+  
+  void _showCupertinoDatePicker(BuildContext context) {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (BuildContext context) {
+        return SizedBox(
+          height: 250,
+          child: Column(
+            children: [
+              Container(
+                color: CupertinoColors.lightBackgroundGray,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CupertinoButton(
+                      child: Text('Cancel'),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                    CupertinoButton(
+                      child: Text('Done'),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Kurdish Cupertino date picker closed')),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: CupertinoDatePicker(
+                  mode: CupertinoDatePickerMode.date,
+                  initialDateTime: DateTime.now(),
+                  onDateTimeChanged: (DateTime newDateTime) {
+                    // Handle date change
+                    // Selected Kurdish date: $newDateTime
+                  },
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 }

@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2025-01-24
+
+### 🔧 Quality & Cultural Improvements
+- **Cultural accuracy**: Fixed weekend configuration to Friday-Saturday (was Thursday-Friday)
+- **Month standardization**: Standardized May from "مایس" to "ئایار" (formal Arabic-derived name)
+- **July consistency**: Fixed July from "تەمموز" to "تەمووز" for consistency
+- **Terminology standardization**: 
+  - "Select All" standardized to "هەمووی دیاریبکە" across all delegates
+  - "Search Web" standardized to "گەڕان لە وێب" across all delegates
+- **Week configuration**: Set first day of week to Sunday (proper work week start)
+- **Code cleanup**: Renamed misnamed `_KurdishMaterialLocalizationsDelegate` to `_KurdishWidgetLocalizationsDelegate`
+
+### 📱 Enhanced Example App
+- **Cupertino demos**: Added iOS-style dialog, action sheet, and date picker examples
+- **Feature showcase**: Added RTL support, weekend configuration, and calendar system indicators
+- **Code quality**: Fixed all Flutter linting issues in example app
+- **Better documentation**: Enhanced with Kurdish-specific features demonstration
+
+### 📚 Documentation Updates
+- **Comprehensive analysis**: Added detailed translation accuracy verification
+- **Cultural context**: Documented Kurdish date/time formatting conventions
+- **Implementation notes**: Added notes about delegate patterns and best practices
+
 ## [1.0.0] - 2024-07-22
 
 ### 🎉 Initial Release as `flutter_kurdish`

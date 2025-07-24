@@ -4,9 +4,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class _KurdishMaterialLocalizationsDelegate
+class _KurdishWidgetLocalizationsDelegate
     extends LocalizationsDelegate<WidgetsLocalizations> {
-  const _KurdishMaterialLocalizationsDelegate();
+  const _KurdishWidgetLocalizationsDelegate();
 
   @override
   bool isSupported(Locale locale) => locale.languageCode == 'ku';
@@ -19,12 +19,12 @@ class _KurdishMaterialLocalizationsDelegate
   }
 
   @override
-  bool shouldReload(_KurdishMaterialLocalizationsDelegate old) => false;
+  bool shouldReload(_KurdishWidgetLocalizationsDelegate old) => false;
 }
 
 class KurdishWidgetLocalizations extends WidgetsLocalizations {
   static const LocalizationsDelegate<WidgetsLocalizations> delegate =
-      _KurdishMaterialLocalizationsDelegate();
+      _KurdishWidgetLocalizationsDelegate();
 
   @override
   TextDirection get textDirection => TextDirection.rtl;
@@ -47,24 +47,17 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   @override
   String get reorderItemUp => 'بڕۆ سەرەوە';
 
-  @override
   String get copyButtonLabel => 'کۆپی';
 
-  @override
   String get cutButtonLabel => 'بڕین';
 
-  @override
   String get pasteButtonLabel => 'پەیست';
 
-  @override
   String get selectAllButtonLabel => 'هەمووی دیاریبکە';
 
-  @override
   String get lookUpButtonLabel => 'گەڕان';
 
-  @override
-  String get searchWebButtonLabel => 'گەڕانی وێب';
+  String get searchWebButtonLabel => 'گەڕان لە وێب';
 
-  @override
   String get shareButtonLabel => 'هاوبەشکردن';
 }
