@@ -117,7 +117,8 @@ class KurdishCupertinoLocalizations implements CupertinoLocalizations {
   DatePickerDateOrder get datePickerDateOrder => DatePickerDateOrder.dmy;
 
   @override
-  DatePickerDateTimeOrder get datePickerDateTimeOrder => DatePickerDateTimeOrder.date_time_dayPeriod;
+  DatePickerDateTimeOrder get datePickerDateTimeOrder =>
+      DatePickerDateTimeOrder.date_time_dayPeriod;
 
   @override
   String get lookUpButtonLabel => 'گەڕان';
@@ -126,7 +127,8 @@ class KurdishCupertinoLocalizations implements CupertinoLocalizations {
   String get menuDismissLabel => 'داخستنی پێڕست';
 
   @override
-  String get noSpellCheckReplacementsLabel => 'هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە';
+  String get noSpellCheckReplacementsLabel =>
+      'هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە';
 
   @override
   String get searchWebButtonLabel => 'گەڕان لە وێب';
@@ -156,7 +158,7 @@ class KurdishCupertinoLocalizations implements CupertinoLocalizations {
 
   @override
   String datePickerMinuteSemanticsLabel(int minute) => '$minute خولەک';
-  
+
   @override
   String datePickerStandaloneMonth(int monthIndex) => _months[monthIndex - 1];
 
@@ -171,6 +173,12 @@ class KurdishCupertinoLocalizations implements CupertinoLocalizations {
 
   @override
   List<String> get timerPickerSecondLabels => const <String>['چرکە'];
+
+  @override
+  String get backButtonLabel => 'گەڕانەوە';
+
+  @override
+  String get cancelButtonLabel => 'لابردن';
 }
 
 class _KurdishCupertinoLocalizationsDelegate
