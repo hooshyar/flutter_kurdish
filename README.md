@@ -1,6 +1,5 @@
 # Flutter Kurdish ☀️
 
-[![pub package](https://img.shields.io/pub/v/flutter_kurdish.svg)](https://pub.dev/packages/flutter_kurdish)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A comprehensive Flutter package for **Central Kurdish (Sorani)** localization with complete RTL support and proper Kurdish cultural conventions.
@@ -35,7 +34,9 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_kurdish: ^1.0.0
+  flutter_kurdish:
+    git:
+      url: https://github.com/hooshyar/flutter_kurdish.git
   flutter_localizations:
     sdk: flutter
 ```

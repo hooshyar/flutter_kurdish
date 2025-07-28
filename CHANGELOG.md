@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 
 ### 🎉 Initial Release as `flutter_kurdish`
 
-This is a **fork and significant enhancement** of the original [`flutter_kurdish_localization`](https://pub.dev/packages/flutter_kurdish_localization) by [Amin Samad](https://github.com/aminsamad).
+This is a **fork and significant enhancement** of the original [`flutter_kurdish_localization`](https://github.com/hooshyar/flutter_kurdish) by [Amin Samad](https://github.com/aminsamad).
 
 ### 🔥 Critical Bug Fixes
 - **MAJOR FIX**: Fixed critical `scrimLabel` crash in `showModalBottomSheet` and other modal dialogs
@@ -64,7 +64,7 @@ This is a **fork and significant enhancement** of the original [`flutter_kurdish
 - **Complete translations**: All user-facing strings properly localized
 
 ### 🙏 Acknowledgments
-- Original package: [`flutter_kurdish_localization`](https://pub.dev/packages/flutter_kurdish_localization) by [Amin Samad](https://github.com/aminsamad)
+- Original package: [`flutter_kurdish_localization`](https://github.com/hooshyar/flutter_kurdish) by [Amin Samad](https://github.com/aminsamad)
 - Kurdish language community for feedback and validation
 - Flutter team for the excellent internationalization framework
 
