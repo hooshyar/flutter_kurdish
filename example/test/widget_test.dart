@@ -17,8 +17,11 @@ void main() {
 
     // Verify that welcome text is displayed
     expect(find.text('Welcome to Kurdish Localization'), findsOneWidget);
-    
+
     // Verify that Kurdish text is displayed
-    expect(find.text('سڵاو، ئەمە نموونەیەکی کوردییە بۆ پاکێجی فلاتەر کوردی.'), findsOneWidget);
+    expect(
+      find.text('سڵاو، ئەمە نموونەیەکی کوردییە بۆ پاکێجی فلاتەر کوردی.'),
+      findsOneWidget,
+    );
   });
 }

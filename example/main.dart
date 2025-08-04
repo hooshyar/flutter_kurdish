@@ -8,7 +8,7 @@ void main() {
 
 class KurdishLocalizationDemo extends StatefulWidget {
   const KurdishLocalizationDemo({super.key});
-  
+
   @override
   KurdishLocalizationDemoState createState() => KurdishLocalizationDemoState();
 }
@@ -26,35 +26,35 @@ class KurdishLocalizationDemoState extends State<KurdishLocalizationDemo> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Kurdish Localization Demo',
-      
+
       // Kurdish localization delegates
       localizationsDelegates: [
         // Kurdish delegates - the star of the show!
         KurdishMaterialLocalizations.delegate,
         KurdishWidgetLocalizations.delegate,
         KurdishCupertinoLocalizations.delegate,
-        
+
         // Flutter's built-in delegates
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      
+
       // Supported locales
       supportedLocales: [
         Locale('ku'), // Kurdish (Central/Sorani)
         Locale('en'), // English
         Locale('ar'), // Arabic
       ],
-      
+
       // Current locale
       locale: _currentLocale,
-      
+
       theme: ThemeData(
         primarySwatch: Colors.green,
         fontFamily: 'Arial', // You can use Kurdish fonts here
       ),
-      
+
       home: DemoHomePage(onLocaleChange: _changeLocale),
     );
   }
@@ -62,7 +62,7 @@ class KurdishLocalizationDemoState extends State<KurdishLocalizationDemo> {
 
 class DemoHomePage extends StatelessWidget {
   final Function(String) onLocaleChange;
-  
+
   const DemoHomePage({super.key, required this.onLocaleChange});
 
   @override
@@ -74,42 +74,39 @@ class DemoHomePage extends StatelessWidget {
           PopupMenuButton<String>(
             icon: Icon(Icons.language),
             onSelected: onLocaleChange,
-            itemBuilder: (BuildContext context) => [
-              PopupMenuItem(
-                value: 'ku',
-                child: Row(
-                  children: [
-                    Text('☀️'),
-                    SizedBox(width: 8),
-                    Text('کوردی'),
-                  ],
-                ),
-              ),
-              PopupMenuItem(
-                value: 'en',
-                child: Row(
-                  children: [
-                    Text('🇺🇸'),
-                    SizedBox(width: 8),
-                    Text('English'),
-                  ],
-                ),
-              ),
-              PopupMenuItem(
-                value: 'ar',
-                child: Row(
-                  children: [
-                    Text('🇸🇦'),
-                    SizedBox(width: 8),
-                    Text('العربية'),
-                  ],
-                ),
-              ),
-            ],
+            itemBuilder:
+                (BuildContext context) => [
+                  PopupMenuItem(
+                    value: 'ku',
+                    child: Row(
+                      children: [Text('☀️'), SizedBox(width: 8), Text('کوردی')],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: 'en',
+                    child: Row(
+                      children: [
+                        Text('🇺🇸'),
+                        SizedBox(width: 8),
+                        Text('English'),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: 'ar',
+                    child: Row(
+                      children: [
+                        Text('🇸🇦'),
+                        SizedBox(width: 8),
+                        Text('العربية'),
+                      ],
+                    ),
+                  ),
+                ],
           ),
         ],
       ),
-      
+
       drawer: Drawer(
         child: ListView(
           children: [
@@ -143,7 +140,7 @@ class DemoHomePage extends StatelessWidget {
           ],
         ),
       ),
-      
+
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
         child: Column(
@@ -171,16 +168,16 @@ class DemoHomePage extends StatelessWidget {
                 ),
               ),
             ),
-            
+
             SizedBox(height: 20),
-            
+
             // Buttons Demo
             Text(
               'Button Examples',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             SizedBox(height: 10),
-            
+
             Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -199,16 +196,16 @@ class DemoHomePage extends StatelessWidget {
                 ),
               ],
             ),
-            
+
             SizedBox(height: 20),
-            
+
             // Date Picker Demo
             Text(
               'Date & Time Examples',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             SizedBox(height: 10),
-            
+
             Row(
               children: [
                 Expanded(
@@ -228,16 +225,16 @@ class DemoHomePage extends StatelessWidget {
                 ),
               ],
             ),
-            
+
             SizedBox(height: 20),
-            
+
             // Form Demo
             Text(
               'Form Examples',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             SizedBox(height: 10),
-            
+
             TextField(
               decoration: InputDecoration(
                 labelText: 'Name',
@@ -245,9 +242,9 @@ class DemoHomePage extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            
+
             SizedBox(height: 10),
-            
+
             TextField(
               decoration: InputDecoration(
                 labelText: 'Email',
@@ -255,9 +252,9 @@ class DemoHomePage extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            
+
             SizedBox(height: 20),
-            
+
             // Kurdish Text Examples
             Card(
               child: Padding(
@@ -288,7 +285,7 @@ class DemoHomePage extends StatelessWidget {
           ],
         ),
       ),
-      
+
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showBottomSheet(context),
         tooltip: 'Show Bottom Sheet',
@@ -296,26 +293,25 @@ class DemoHomePage extends StatelessWidget {
       ),
     );
   }
-  
+
   void _showSnackBar(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('This is a SnackBar with Kurdish localization!'),
-        action: SnackBarAction(
-          label: 'OK',
-          onPressed: () {},
-        ),
+        action: SnackBarAction(label: 'OK', onPressed: () {}),
       ),
     );
   }
-  
+
   void _showDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('Kurdish Dialog'),
-          content: Text('This dialog demonstrates Kurdish localization in action. All buttons and labels are properly translated.'),
+          content: Text(
+            'This dialog demonstrates Kurdish localization in action. All buttons and labels are properly translated.',
+          ),
           actions: [
             TextButton(
               child: Text('Cancel'),
@@ -330,7 +326,7 @@ class DemoHomePage extends StatelessWidget {
       },
     );
   }
-  
+
   void _showBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -368,7 +364,7 @@ class DemoHomePage extends StatelessWidget {
       },
     );
   }
-  
+
   void _showDatePicker(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -376,25 +372,29 @@ class DemoHomePage extends StatelessWidget {
       firstDate: DateTime(2000),
       lastDate: DateTime(2025),
     );
-    
+
     if (picked != null && context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Selected date: ${picked.day}/${picked.month}/${picked.year}')),
+        SnackBar(
+          content: Text(
+            'Selected date: ${picked.day}/${picked.month}/${picked.year}',
+          ),
+        ),
       );
     }
   }
-  
+
   void _showTimePicker(BuildContext context) async {
     final TimeOfDay? picked = await showTimePicker(
       context: context,
       initialTime: TimeOfDay.now(),
     );
-    
+
     if (picked != null && context.mounted) {
       final formattedTime = picked.format(context);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Selected time: $formattedTime')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Selected time: $formattedTime')));
     }
   }
 }
