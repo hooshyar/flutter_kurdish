@@ -120,4 +120,25 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
 
   @override
   String get lastPageTooltip => 'کۆتا پەڕە';
+
+  @override
+  String get strikethroughButtonLabel => 'خەت بەسەرداهاتوو';
+
+  @override
+  String get underlineButtonLabel => 'ژێرخەت';
+
+  @override
+  String get italicButtonLabel => 'لار';
+
+  @override
+  String get boldButtonLabel => 'تۆخ';
+
+  @override
+  String get selectButtonLabel => 'دیاریکردن';
+
+  @override
+  String get clearButtonTooltip => 'پاککردنەوە';
+
+  @override
+  String get scanTextButtonLabel => 'سکانی دەق';
 }
