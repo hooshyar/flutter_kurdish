@@ -67,4 +67,57 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
 
   @override
   String get shareButtonLabel => 'هاوبەشکردن';
+
+  @override
+  String get moreButtonTooltip => 'زیاتر';
+
+  
+
+  @override
+  String get alertDialogLabel => 'ئاگادارکردنەوە';
+
+  @override
+  String get anteMeridiemAbbreviation => 'پ.ن';
+
+  @override
+  String get postMeridiemAbbreviation => 'د.ن';
+
+  @override
+  String get timePickerHourModeAnnouncement => 'کاتژمێر دیاریبکە';
+
+  @override
+  String get timePickerMinuteModeAnnouncement => 'خولەک دیاریبکە';
+
+  @override
+  String get modalBarrierDismissLabel => 'لابردن';
+
+  @override
+  String get drawerLabel => 'لیستی پێڕست';
+
+  @override
+  String get popupMenuLabel => 'لیستی پۆپئەپ';
+
+  @override
+  String get dialogLabel => 'دیالۆگ';
+
+  @override
+  String get selectedRowCountTitle => r'$selectedRowCount دانە دیاریکراوە';
+
+  @override
+  String get rowsPerPageTitle => 'ڕیزەکان بۆ هەر پەڕەیەک:';
+
+  @override
+  String get pageRowsInfoTitle => r'Showing $firstRow–$lastRow of $rowCount';
+
+  @override
+  String get nextPageTooltip => 'پەڕەی دواتر';
+
+  @override
+  String get previousPageTooltip => 'پەڕەی پێشوو';
+
+  @override
+  String get firstPageTooltip => 'یەکەم پەڕە';
+
+  @override
+  String get lastPageTooltip => 'کۆتا پەڕە';
 }
