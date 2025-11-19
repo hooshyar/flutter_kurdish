@@ -179,6 +179,24 @@ class KurdishCupertinoLocalizations implements CupertinoLocalizations {
 
   @override
   String get cancelButtonLabel => 'لابردن';
+
+  @override
+  String get collapsedHint => 'فراوانکراو';
+
+  @override
+  String get expandedHint => 'داخراو';
+
+  @override
+  String get expansionTileCollapsedHint => 'دوو جار بکە بۆ فراوانکردن';
+
+  @override
+  String get expansionTileCollapsedTapHint => 'فراوانبکە بۆ زانیاری زیاتر';
+
+  @override
+  String get expansionTileExpandedHint => 'دوو جار بکە بۆ داخستن';
+
+  @override
+  String get expansionTileExpandedTapHint => 'داخستن';
 }
 
 class _KurdishCupertinoLocalizationsDelegate
