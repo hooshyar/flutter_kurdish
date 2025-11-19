@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2025-01-19
+
+### 🔧 Bug Fixes
+- **Flutter 3.29+ compatibility**: Added missing `CupertinoLocalizations` methods for ExpansionTile accessibility
+  - `collapsedHint`: 'فراوانکراو' (Expanded)
+  - `expandedHint`: 'داخراو' (Collapsed)
+  - `expansionTileCollapsedHint`: 'دوو جار بکە بۆ فراوانکردن' (double tap to expand)
+  - `expansionTileCollapsedTapHint`: 'فراوانبکە بۆ زانیاری زیاتر' (Expand for more details)
+  - `expansionTileExpandedHint`: 'دوو جار بکە بۆ داخستن' (double tap to collapse)
+  - `expansionTileExpandedTapHint`: 'داخستن' (Collapse)
+
+### 📋 Technical Details
+- **Issue**: Compilation failed with "KurdishCupertinoLocalizations is missing implementations" error
+- **Root cause**: Flutter 3.29 added new required methods to `CupertinoLocalizations` interface
+- **Impact**: Package now compiles successfully with Flutter 3.29+ and Shorebird OTA builds
+- **Tested with**: Flutter 3.29.0, Shorebird integration
+
 ## [1.0.1] - 2025-01-24
 
 ### 🔧 Quality & Cultural Improvements

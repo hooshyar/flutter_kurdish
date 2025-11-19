@@ -1,6 +1,6 @@
 name: flutter_kurdish
 description: A comprehensive Flutter package for Central Kurdish (Sorani) localization. Fork of flutter_kurdish_localization with complete translations and bug fixes.
-version: 1.0.3
+version: 1.0.4
 repository: https://github.com/hooshyar/flutter_kurdish
 homepage: https://github.com/hooshyar/flutter_kurdish
 issue_tracker: https://github.com/hooshyar/flutter_kurdish/issues
