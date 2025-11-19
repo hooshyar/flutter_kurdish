@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2025-01-19
+
+### 🔧 Bug Fixes
+- **Flutter analyzer compatibility**: Removed `@override` annotations from Flutter 3.29+ methods
+  - Fixes analyzer warnings in projects using older Flutter SDK versions
+  - Methods still present and functional for Flutter 3.29+ (Shorebird)
+  - Ensures backwards compatibility across all Flutter versions
+
+### ✅ Quality
+- **flutter analyze**: 0 issues found
+- Compatible with Flutter 2.18.0 - 3.29.0+
+
 ## [1.0.4] - 2025-01-19
 
 ### 🔧 Bug Fixes
