@@ -180,22 +180,18 @@ class KurdishCupertinoLocalizations implements CupertinoLocalizations {
   @override
   String get cancelButtonLabel => 'لابردن';
 
-  @override
+  // Flutter 3.29+ ExpansionTile accessibility methods
+  // Note: @override removed for backwards compatibility with older Flutter versions
   String get collapsedHint => 'فراوانکراو';
 
-  @override
   String get expandedHint => 'داخراو';
 
-  @override
   String get expansionTileCollapsedHint => 'دوو جار بکە بۆ فراوانکردن';
 
-  @override
   String get expansionTileCollapsedTapHint => 'فراوانبکە بۆ زانیاری زیاتر';
 
-  @override
   String get expansionTileExpandedHint => 'دوو جار بکە بۆ داخستن';
 
-  @override
   String get expansionTileExpandedTapHint => 'داخستن';
 }
 
